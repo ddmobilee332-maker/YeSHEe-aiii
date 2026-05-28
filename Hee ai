@@ -1,0 +1,38 @@
+-- Ruenyai HUB v2.0 - Theme & Branding Assets
+local Theme = {}
+
+Theme.Colors = {
+    Red     = "\27[31m",
+    DarkRed = "\27[1;31m",
+    Gray    = "\27[90m",
+    Green   = "\27[32m",
+    Yellow  = "\27[33m",
+    Reset   = "\27[0m",
+    Bold    = "\27[1m"
+}
+
+Theme.AsciiArt = [[
+ ██████╗ ██╗   ██╗███████╗███╗   ██╗██╗   ██╗ █████╗ ██╗    ██╗██╗   ██╗██████╗ 
+ ██╔══██╗██║   ██║██╔════╝████╗  ██║╚██╗ ██╔╝██╔══██╗██║    ██║██║   ██║██╔══██╗
+ ██████╔╝██║   ██║█████╗  ██╔██╗ ██║ ╚████╔╝ ███████║██║    ██║██║   ██║██████╔╝
+ ██╔══██╗██║   ██║██╔══╝  ██║╚██╗██║  ╚██╔╝  ██╔══██║██║    ██║██║   ██║██╔══██╗
+ ██║  ██║╚██████╔╝███████╗██║ ╚████║   ██║   ██║  ██║██║    ██║╚██████╔╝██████╔╝
+ ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝╚═╝    ╚═╝ ╚═════╝ ╚═════╝ ]]
+
+function Theme.PrintHeader()
+    local c = Theme.Colors
+    os.execute("clear") or os.execute("cls")
+    print(c.DarkRed .. Theme.AsciiArt)
+    print(c.Red .. " =======================================================================")
+    print(c.Bold .. c.Red .. "   PROJECT: RUENYAI HUB v2.0  |  OWNER: " .. c.Reset .. c.Bold .. "รุ่นใหญ่ HUB" .. c.Red)
+    print("   STATUS: " .. c.Green .. "ONLINE CORE" .. c.Red .. "              |  MODULES: 6 ACTIVE FILES")
+    print(" =======================================================================" .. c.Reset)
+    print(c.Gray .. "  [+] COMMAND LISTS:")
+    print(c.DarkRed .. "    » oopp  " .. c.Reset .. " : ระบบกรอกบัญชี เข้ารหัสล็อกอิน และออนบอตเซิร์ฟเวอร์")
+    print(c.DarkRed .. "    » oopp2 " .. c.Reset .. " : ระบบแฮกสแกนลิงก์แมพ ดึงข้อมูล พร้อมส่งรหัสเข้าตัวเกม")
+    print(c.DarkRed .. "    » oopp3 " .. c.Reset .. " : แผงควบคุมคำสั่งบอต สั่งการทำงานอิสระไร้ขีดจำกัด")
+    print(c.DarkRed .. "    » exit  " .. c.Reset .. " : สั่งปิดการทำงานระบบ")
+    print(c.Red .. " =======================================================================\n" .. c.Reset)
+end
+
+return Theme
